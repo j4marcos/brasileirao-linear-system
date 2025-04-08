@@ -1,7 +1,7 @@
 // GraphView.tsx
 import React, { useContext } from 'react';
 import { NetworkContext } from '../context/NetworkContext';
-import ReactFlow, { MiniMap, Controls, Background, Node, Edge } from 'react-flow-renderer';
+import ReactFlow, { MiniMap, Controls, Background, Node } from 'react-flow-renderer';
 import { Box } from '@mui/material';
 
 const GraphView: React.FC = () => {

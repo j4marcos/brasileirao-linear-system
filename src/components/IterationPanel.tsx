@@ -1,5 +1,5 @@
 // IterationPanel.tsx
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { NetworkContext } from '../context/NetworkContext';
 import { Box, Button, Typography } from '@mui/material';
 
