@@ -1,14 +1,25 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import TeamsPage from './TeamsPage';
-import TeamGamesPage from './TeamGamesPage';
+import { NetworkProvider } from './context/NetworkContext';
+import NetworkEditor from './components/NetworkEditor';
+import GraphView from './components/GraphView';
+import IterationPanel from './components/IterationPanel';
+import { Container, Typography } from '@mui/material';
+import MatrixPanel from './components/MatrixPanel';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<TeamsPage />} />
-      <Route path="/team/:teamId" element={<TeamGamesPage />} />
-    </Routes>
+    <NetworkProvider>
+      <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+        <Typography variant="h4" align="center" gutterBottom>
+          Simulador Interativo de Distribuição Logística – Método Gauss-Seidel
+        </Typography>
+        {/* O tema pode incluir o logo da Amazon e cores características */}
+        <NetworkEditor />
+        <GraphView />
+        <IterationPanel />
+        <MatrixPanel /> 
+      </Container>
+    </NetworkProvider>
   );
 }
 
